@@ -10,7 +10,6 @@ if (data !== null) {
 const btn = document.querySelector(".Button-submit");
 const input = document.querySelector("#todo");
 const ul = document.querySelector(".todo");
-let li = ul.getElementsByTagName("li");
 
 btn.addEventListener("click", () => {
   addToLocalStorage();
@@ -23,8 +22,11 @@ btn.addEventListener("click", () => {
 
 window.addEventListener("load", function () {
   addContent();
+  const li = ul.getElementsByTagName("li");
+  checkIs_Finish(li);
 });
 
+// menambahkan data inputan ke localstorage
 const addToLocalStorage = () => {
   if (input.value == "") {
     return setTimeout(() => alert("kamu belum menuliskan task!!"), 300);
@@ -43,7 +45,29 @@ const addContent = () => {
     ul.appendChild(li);
     const hr = document.createElement("hr");
     ul.appendChild(hr);
+    const todoList = ul.getElementsByTagName("li");
+    getIndex(todoList);
   });
 };
 
-// merubah is_finish menjadi true
+// mengambil index data
+function getIndex(todoList) {
+  let dataList = Array.from(todoList);
+  dataList.forEach((element, index) => {
+    element.addEventListener("click", () => {
+      element.classList.add("line");
+      todo[index].is_finish = true;
+      localStorage.setItem("TODO", JSON.stringify(todo));
+    });
+  });
+}
+
+// fungsi untuk mengechek apakah todo.is_finsih = true jika true maka elemen di garis
+const checkIs_Finish = (prop) => {
+  let lists = Array.from(prop);
+  lists.forEach((e, index) => {
+    if (todo[index].is_finish === true) {
+      e.classList.add("line");
+    }
+  });
+};

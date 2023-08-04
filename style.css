@@ -88,3 +88,7 @@ hr {
   text-decoration: line-through;
   cursor: pointer;
 }
+
+.line {
+  text-decoration: line-through;
+}
