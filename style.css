@@ -1,0 +1,80 @@
+@import url("https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 400px;
+  display: grid;
+  place-items: center;
+}
+
+main {
+  /* border: 1px solid black; */
+  padding: 40px;
+}
+
+h1 {
+  font-family: "Fuzzy Bubbles", cursive;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+form {
+  margin-bottom: 30px;
+}
+
+hr {
+  border: 1px solid rgb(0, 0, 0);
+  margin-bottom: 10px;
+}
+
+.label {
+  display: block;
+  margin-bottom: 1.2rem;
+  text-align: center;
+  font-family: "Fuzzy Bubbles", cursive;
+}
+
+.input {
+  box-sizing: border-box;
+  background-color: transparent;
+  padding: 0.7rem;
+  border-radius: 3px;
+  width: 70%;
+  font-family: "Fuzzy Bubbles", cursive;
+  border: solid 3px transparent;
+  border-bottom: solid 3px black;
+  margin-bottom: 20px;
+  font-size: 1rem;
+  margin-right: 10px;
+}
+
+.Button-submit {
+  background-color: transparent;
+  padding: 10px;
+  border: 2px solid black;
+  border-radius: 5px;
+  cursor: pointer;
+  transform: rotate(-9deg);
+  box-shadow: 0 3px 0 black;
+  font-family: "Fuzzy Bubbles", cursive;
+}
+
+.todo {
+  text-align: left;
+  font-family: "Fuzzy Bubbles", cursive;
+}
+
+.todo li {
+  padding: 0.5rem;
+  position: relative;
+}
+
+.todo li:hover {
+  text-decoration: line-through;
+  cursor: pointer;
+}
