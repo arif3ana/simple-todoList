@@ -7,14 +7,14 @@
 }
 
 body {
-  height: 400px;
+  height: auto;
   display: grid;
   place-items: center;
 }
 
 main {
   /* border: 1px solid black; */
-  padding: 40px;
+  padding: 50px 40px 40px 40px;
 }
 
 h1 {
@@ -62,6 +62,12 @@ hr {
   transform: rotate(-9deg);
   box-shadow: 0 3px 0 black;
   font-family: "Fuzzy Bubbles", cursive;
+  transition: 3ms;
+}
+
+.clicked {
+  transform: rotate(0deg);
+  box-shadow: 0 1px 0 black;
 }
 
 .todo {
