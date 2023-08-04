@@ -39,6 +39,10 @@ hr {
   font-family: "Fuzzy Bubbles", cursive;
 }
 
+.input:focus {
+  outline-style: none;
+}
+
 .input {
   box-sizing: border-box;
   background-color: transparent;
@@ -76,7 +80,7 @@ hr {
 }
 
 .todo li {
-  padding: 0.5rem;
+  padding: 1rem;
   position: relative;
 }
 
