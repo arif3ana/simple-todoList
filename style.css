@@ -92,3 +92,26 @@ hr {
 .line {
   text-decoration: line-through;
 }
+
+.button_clear {
+  margin: 40px 0 0 0;
+  text-align: right;
+}
+
+.delete_btn {
+  background-color: transparent;
+  padding: 10px;
+  border: 2px solid black;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  /* transform: rotate(-9deg); */
+  box-shadow: 6px 6px 0 black;
+  font-family: "Fuzzy Bubbles", cursive;
+  transition: 5ms;
+}
+
+.delete_btn:hover {
+  box-shadow: 0 0 0 black;
+  opacity: 0.6;
+}
